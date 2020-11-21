@@ -55,6 +55,33 @@ class singleLinkList {
 
         this.count++;
     }
+    // Remove from index value
+    removeAt = (index) => {
+        if (index > 0 && index > this.size) {
+            console.log("Out of range value!");
+            return;
+        }
+
+        let present = this.head;
+        let previous;
+        let count = 0;
+
+        // Remove first
+        if (index === 0) {
+            this.head = present.next;
+        } else {
+            while (count < index) {
+                count++;
+                previous = present;
+                present = present.next;
+            }
+
+            previous.next = present.next;
+        }
+
+        this.count--;
+    }
+
 
 }
 

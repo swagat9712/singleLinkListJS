@@ -8,3 +8,5 @@ utility.inserNodeLast(newValueLast);
 let newValueForIndex = readlineSync.question("Enter node value:");
 let newindexValue = readlineSync.question("Enter Index:");
 utility.insertNodeIndex(newValueForIndex, newindexValue);
+let removeIndexValue = readlineSync.question("Enter Index:");
+utility.removeAt(removeIndexValue);
