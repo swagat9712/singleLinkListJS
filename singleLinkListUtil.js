@@ -81,6 +81,26 @@ class singleLinkList {
 
         this.count--;
     }
+    // Clear list
+    deleteLinkList() {
+        this.head = null;
+        this.count = 0;
+    }
+
+
+    printLinkList = () => {
+        if (this.head == null) {
+            console.log("list empty");
+            return;
+        }
+        let present = this.head;
+        let position = this.count;
+
+        for (; present != null; present = present.next) {
+            console.log(`Node Value = ${present.data} position = ${position}`)
+            position--;
+        }
+    }
 
 
 }
@@ -88,4 +108,3 @@ class singleLinkList {
 
 
 module.exports = new singleLinkList();
-
