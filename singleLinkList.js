@@ -3,3 +3,8 @@ let readlineSync = require('readline-sync');
 console.log("welcome to single link list!");
 let newValue = readlineSync.question("Enter node value:");
 utility.insertNode(newValue);
+let newValueLast = readlineSync.question("Enter node last value:");
+utility.inserNodeLast(newValueLast);
+let newValueForIndex = readlineSync.question("Enter node value:");
+let newindexValue = readlineSync.question("Enter Index:");
+utility.insertNodeIndex(newValueForIndex, newindexValue);
