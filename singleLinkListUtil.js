@@ -44,10 +44,17 @@ class singleLinkList {
         present = this.head;
         let count = 0;
 
-        while (count < index) {
+        while (count < index  && present.next != null) {
+            //for previous node
             previous = present;
             count++;
+            //for next node
             present = present.next;
+        }
+        // if index is last node
+        if(present.next == null){
+            present.next = node;
+            return;
         }
 
         node.next = present;
